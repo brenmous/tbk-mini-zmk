@@ -5,10 +5,11 @@ Official repository for the TBK Mini: https://github.com/Bastardkb/TBK-Mini.
 
 This is my attempt at firmware for a TBK Mini running on nice!nano v2s.
 
-There's nothing in the personal config right now, but once I get the
-keyboard working I'll put my keymap in there.
+~~There's nothing in the personal config right now, but once I get the
+keyboard working I'll put my keymap in there.~~
 
-Also yeah it's not working (fully) yet.
+Working and now typing at a blazing 55 WPM. Working on my keymap.
+
 
 Building
 --------
