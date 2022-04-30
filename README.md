@@ -16,7 +16,8 @@ understand why it's there!) so here's how I do it:
   to setup your build environment.
 - Clone the zmk repo
 - Copy the `tbk_mini` directory from the top level of this repo to `zmk/app/boards/shields`
-- Build using: `west build -p -b nice_nano_v2 -d build/left -- -DSHIELD=tbk_mini_left`
+- Build from within the `zmk/app` directory using: 
+  `west build -p -b nice_nano_v2 -d build/left -- -DSHIELD=tbk_mini_left`
 - Replace occurrences of 'left' with 'right' to build the right half
 - The UF2 files will be at `zmk/app/build/<left|right>/zephyr/zmk.uf2`
 
