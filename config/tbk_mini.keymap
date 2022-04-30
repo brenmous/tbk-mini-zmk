@@ -10,19 +10,20 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define SYM 1
-#define NAV 2
-#define FUNCTION 3
-#define CONFIG 4
+#define GAME 1
+#define SYM 2
+#define NAV 3
+#define FUNCTION 4
+#define CONFIG 5
 
 #define XXX &none
 #define ___ &trans
 
 / {
 	behaviors {
-		st: sym_tap {
+		ss: sym_shift {
 			compatible = "zmk,behavior-hold-tap";
-			label = "SYM_SHOFT";
+			label = "SYM_SHIFT";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			quick-tap-ms = <100>;
@@ -39,49 +40,48 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-            &st NAV SYM &kp LSFT &kp SPACE   &kp RET &kp BSPC &mo FUNCTION
+            &mo NAV &ss LSFT SYM &kp SPACE   &kp RET &kp BSPC &mo FUNCTION
                         >;
                 };
-
+                game_layer {
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
+   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
+            &kp LALT &kp LSFT &kp SPACE   &kp RET &kp BSPC ___  
+                        >;
+                };
 		sym_layer {
                      bindings = <
-   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX         XXX &kp ASTRK  XXX       XXX       XXX XXX
-   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS    XXX &kp DLLR   &kp PRCNT &kp CARET  XXX XXX
+   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX         XXX &kp AMPS   &kp ASTRK XXX       XXX XXX
+   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS    XXX &kp DLLR   &kp PRCNT &kp CARET XXX XXX
    &kp GRAVE  &kp MINUS &kp LBRC &kp RBRC &kp PIPE &kp BSLH          XXX &kp EXCL   &kp AT    &kp HASH  XXX XXX
-                  			        ___ ___ XXX          XXX XXX XXX
+                  			        XXX XXX XXX          XXX XXX XXX
                         >;
                 };
-    
 		nav_layer {
                      bindings = <
    XXX  XXX XXX XXX XXX XXX                     &kp HOME &kp PG_DN &kp PG_UP &kp END   XXX XXX
    XXX  XXX XXX XXX XXX XXX   		        &kp LEFT &kp DOWN  &kp UP    &kp RIGHT XXX XXX
    XXX  XXX XXX XXX XXX XXX                     XXX XXX XXX XXX XXX XXX
-                  ___ ___ XXX                         XXX ___ XXX
+                  ___ ___ ___                         ___ ___ XXX
                         >;
                 };
-    
 		function_layer {
                      bindings = <
-   &kp F1 &kp F2 XXX XXX         &kp C_PP &kp C_NEXT    &kp C_VOL_UP   &kp N7  &kp N8 &kp N9  &kp F7  &kp F8
-   &kp F3 &kp F4 XXX XXX         XXX      &kp C_PREV    &kp C_VOL_DN   &kp N4  &kp N5 &kp N6  &kp F9  &kp F10
-   &kp F5 &kp F6 XXX &tog CONFIG XXX      XXX           &kp N0         &kp N1  &kp N2 &kp N3  &kp F11 &kp F12
-                                         XXX ___ XXX    XXX ___ ___
+   &kp F1 &kp F2 XXX &kp C_VOL_UP &kp C_NEXT XXX          &tog CONFIG    &kp N7  &kp N8 &kp N9  &kp F7  &kp F8
+   &kp F3 &kp F4 XXX &kp C_MUTE   &kp C_PP   &tog GAME    XXX            &kp N4  &kp N5 &kp N6  &kp F9  &kp F10
+   &kp F5 &kp F6 XXX &kp C_VOL_DN &kp C_PREV XXX          &kp N0         &kp N1  &kp N2 &kp N3  &kp F11 &kp F12
+                                 XXX ___ ___               ___ ___ ___
                         >;
                 };
-
 		config_layer {
                      bindings = <
-   &reset      XXX XXX         &out OUT_USB &bt BT_SEL 0 &bt BT_NXT      XXX XXX XXX XXX XXX &reset
-   &bootloader XXX XXX         &out OUT_BLE &bt BT_CLR   &bt BT_PRV     XXX XXX XXX XXX XXX &bootloader
-   XXX         XXX ___         XXX          XXX          XXX             XXX XXX XXX XXX XXX XXX
-                                                         XXX XXX XXX     XXX XXX XXX
+   &reset      XXX          XXX XXX XXX XXX                     ___  XXX XXX &out OUT_TOG XXX &reset
+   &bootloader XXX          XXX XXX XXX XXX                     XXX XXX XXX XXX          XXX &bootloader
+   XXX         XXX          XXX &bt BT_CLR XXX &bt BT_SEL 0     XXX XXX XXX XXX          XXX XXX
+                                XXX XXX XXX                     XXX XXX ___ 
                         >;
                 };
-
-    
         };
-
-};
-
-
+};                
