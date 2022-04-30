@@ -33,7 +33,7 @@ You can compile the firmware with this (or your own config) by setting
 the path to the `config` directory as the `-DZMK_CONFIG` build flag.
 
 The keymap has a default layer, a function layer, a nav layer and
-a hold-tab symbols layer.
+a hold-tap symbols layer.
 
 The function layer contains the F keys, numbers and some media controls.
 Future things (like layer toggles) I'd put in this layer as well.
@@ -41,7 +41,7 @@ Future things (like layer toggles) I'd put in this layer as well.
 The nav layer contains arrows and nav (HOME, END etc.).
 
 The symbols layer is activated by tapping the hold-tap key (currently
-the nav layer key). A quick tap plus the nessecary key(s) will output
+the nav layer key). A quick tap plus the necessary key(s) will output
 symbols, e.g. tapping the nav key then 'W' and 'E' will give a pair
 of parentheses. I used to run this on the shift key. The advantage of
 that is I didn't have to move my thumb very much, but it does add a 
