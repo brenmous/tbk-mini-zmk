@@ -15,7 +15,6 @@
 #define NAV 3
 #define FUNCTION 4
 #define CONFIG 5
-
 #define XXX &none
 #define ___ &trans
 
@@ -53,9 +52,9 @@
                 };
 		sym_layer {
                      bindings = <
-   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX        XXX &kp AMPS &kp ASTRK XXX       XXX XXX
-   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS   XXX &kp DLLR &kp PRCNT &kp CARET XXX XXX
-   &kp GRAVE  &kp MINUS      &kp LBRC &kp RBRC &kp PIPE  &kp BSLH   XXX &kp EXCL &kp AT    &kp HASH  XXX XXX
+   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX        XXX XXX &kp AMPS &kp ASTRK       XXX       XXX
+   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS   XXX &kp DLLR &kp PRCNT &kp CARET &kp COLON &kp DQT
+   &kp GRAVE  &kp MINUS      &kp LBRC &kp RBRC &kp PIPE  &kp BSLH   XXX &kp EXCL &kp AT    &kp HASH  XXX       XXX
                   			              XXX XXX XXX   XXX XXX XXX
                         >;
                 };
