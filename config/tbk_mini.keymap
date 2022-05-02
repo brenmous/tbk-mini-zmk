@@ -40,7 +40,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-            &mo NAV &ss LSFT SYM &kp RET   &kp BPSC &kp SPACE &mo FUNCTION
+              &mo NAV &ss LSFT SYM &kp RET   &kp BSPC &kp SPACE &mo FUNCTION
                         >;
                 };
                 game_layer {
@@ -53,33 +53,33 @@
                 };
 		sym_layer {
                      bindings = <
-   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX         XXX &kp AMPS   &kp ASTRK XXX       XXX XXX
-   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS    XXX &kp DLLR   &kp PRCNT &kp CARET XXX XXX
-   &kp GRAVE  &kp MINUS &kp LBRC &kp RBRC &kp PIPE &kp BSLH          XXX &kp EXCL   &kp AT    &kp HASH  XXX XXX
-                  			        XXX XXX XXX          XXX XXX XXX
+   XXX        XXX            &kp LPAR &kp RPAR XXX       XXX        XXX &kp AMPS &kp ASTRK XXX       XXX XXX
+   &kp TILDE  &kp UNDERSCORE &kp LBKT &kp RBKT &kp EQUAL &kp PLUS   XXX &kp DLLR &kp PRCNT &kp CARET XXX XXX
+   &kp GRAVE  &kp MINUS      &kp LBRC &kp RBRC &kp PIPE  &kp BSLH   XXX &kp EXCL &kp AT    &kp HASH  XXX XXX
+                  			              XXX XXX XXX   XXX XXX XXX
                         >;
                 };
 		nav_layer {
                      bindings = <
-   XXX  XXX XXX XXX XXX XXX                     &kp HOME &kp PG_DN &kp PG_UP &kp END   XXX XXX
-   XXX  XXX XXX XXX XXX XXX   		        &kp LEFT &kp DOWN  &kp UP    &kp RIGHT XXX XXX
-   XXX  XXX XXX XXX XXX XXX                     XXX XXX XXX XXX XXX XXX
-                  ___ ___ ___                         ___ ___ XXX
+   XXX XXX &kp C_PP   &kp C_NEXT   &kp C_PREV   XXX   &kp HOME &kp PG_DN &kp PG_UP &kp END   XXX XXX
+   XXX XXX &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN XXX   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT XXX XXX
+   XXX XXX XXX        XXX          XXX          XXX   XXX      XXX       XXX       XXX       XXX XXX
+                                        ___ ___ ___   ___ ___ XXX
                         >;
                 };
 		function_layer {
                      bindings = <
-   &kp F1 &kp F2 XXX &kp C_VOL_UP &kp C_NEXT XXX          &tog CONFIG    &kp N7  &kp N8 &kp N9  &kp F7  &kp F8
-   &kp F3 &kp F4 XXX &kp C_MUTE   &kp C_PP   &tog GAME    XXX            &kp N4  &kp N5 &kp N6  &kp F9  &kp F10
-   &kp F5 &kp F6 XXX &kp C_VOL_DN &kp C_PREV XXX          &kp N0         &kp N1  &kp N2 &kp N3  &kp F11 &kp F12
-                                 XXX ___ ___               ___ ___ ___
+   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8  &kp F9 &kp F10  &kp F11  &kp F12
+   XXX &kp N0 &kp N1 &kp N2 &kp N3 &kp N4   	&kp N5 &kp N6  &kp N7 &kp N8   &kp N9   XXX
+   &tog GAME XXX    XXX    XXX    XXX    XXX          XXX    XXX     XXX    XXX      XXX      &tog CONFIG
+                                 XXX ___ ___    ___ ___ ___
                         >;
                 };
 		config_layer {
                      bindings = <
-   &reset      XXX          XXX XXX XXX XXX                     ___  XXX XXX &out OUT_TOG XXX &reset
-   &bootloader XXX          XXX XXX XXX XXX                     XXX XXX XXX XXX          XXX &bootloader
-   XXX         XXX          XXX &bt BT_CLR XXX &bt BT_SEL 0     XXX XXX XXX XXX          XXX XXX
+   &reset      XXX          XXX XXX XXX XXX                     XXX  XXX XXX &out OUT_TOG XXX &reset
+   &bootloader XXX          XXX XXX XXX XXX                     XXX XXX XXX XXX           XXX &bootloader
+   XXX         XXX          XXX &bt BT_CLR XXX &bt BT_SEL 0     XXX XXX XXX XXX           XXX ___
                                 XXX XXX XXX                     XXX XXX ___ 
                         >;
                 };
