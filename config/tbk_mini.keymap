@@ -40,7 +40,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-            &mo NAV &ss LSFT SYM &kp SPACE   &kp RET &kp BSPC &mo FUNCTION
+            &mo NAV &ss LSFT SYM &kp RET   &kp BPSC &kp SPACE &mo FUNCTION
                         >;
                 };
                 game_layer {
@@ -48,7 +48,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-            &kp LALT &kp LSFT &kp SPACE   &kp RET &kp BSPC ___  
+            &kp LALT &kp LSFT &kp SPACE      &kp RET &kp BSPC ___  
                         >;
                 };
 		sym_layer {
