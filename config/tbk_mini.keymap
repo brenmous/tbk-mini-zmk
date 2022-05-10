@@ -39,7 +39,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-              &mo NAV &ss LSFT SYM &kp RET   &kp BSPC &kp SPACE &mo FUNCTION
+             &mo NAV &ss LSFT SYM &kp BSPC   &kp RET &kp SPACE &mo FUNCTION
                         >;
                 };
                 game_layer {
@@ -47,7 +47,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-            &kp LALT &kp LSFT &kp SPACE      &kp RET &kp BSPC ___  
+             &kp LALT &kp SPACE &kp LSFT     &kp RET &kp BSPC ___  
                         >;
                 };
 		sym_layer {
@@ -76,9 +76,9 @@
                 };
 		config_layer {
                      bindings = <
-   &reset      XXX          XXX XXX XXX XXX                     XXX  XXX XXX &out OUT_TOG XXX &reset
-   &bootloader XXX          XXX XXX XXX XXX                     XXX XXX XXX XXX           XXX &bootloader
-   XXX         XXX          XXX &bt BT_CLR XXX &bt BT_SEL 0     XXX XXX XXX XXX           XXX ___
+   &reset      XXX          XXX XXX 	   XXX XXX      XXX XXX 	 XXX &out OUT_TOG XXX &reset
+   &bootloader XXX          XXX XXX	   XXX XXX      XXX XXX		 XXX &bt BT_SEL 1 XXX &bootloader
+   XXX         XXX          XXX &bt BT_CLR XXX XXX     XXX &bt BT_SEL 0 XXX XXX          XXX ___
                                 XXX XXX XXX                     XXX XXX ___ 
                         >;
                 };
