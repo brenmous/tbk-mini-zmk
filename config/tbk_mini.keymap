@@ -10,11 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define GAME 1
-#define SYM 2
-#define NAV 3
-#define FUNCTION 4
-#define CONFIG 5
+#define SYM 1
+#define NAV 2
+#define FUNCTION 3
+#define CONFIG 4
 #define XXX &none
 #define ___ &trans
 
@@ -42,14 +41,6 @@
              &mo NAV &ss LSFT SYM &kp BSPC   &kp RET &kp SPACE &mo FUNCTION
                         >;
                 };
-                game_layer {
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
-   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-             &kp LALT &kp SPACE &kp LSFT     &kp RET &kp BSPC ___  
-                        >;
-                };
 		sym_layer {
                      bindings = <
    XXX        XXX            &kp LPAR &kp RPAR XXX       XXX        XXX XXX &kp AMPS &kp ASTRK       XXX       XXX
@@ -70,7 +61,7 @@
                      bindings = <
    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8  &kp F9 &kp F10  &kp F11  &kp F12
    XXX &kp N0 &kp N1 &kp N2 &kp N3 &kp N4   	&kp N5 &kp N6  &kp N7 &kp N8   &kp N9   XXX
-   &tog GAME XXX    XXX    XXX    XXX    XXX          XXX    XXX     XXX    XXX      XXX      &tog CONFIG
+   XXX XXX    XXX    XXX    XXX    XXX          XXX    XXX     XXX    XXX      XXX      &tog CONFIG
                                  XXX ___ ___    ___ ___ ___
                         >;
                 };
