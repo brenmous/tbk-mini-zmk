@@ -11,9 +11,8 @@
 
 #define DEFAULT 0
 #define SYM 1
-#define NAV 2
-#define FUNCTION 3
-#define CONFIG 4
+#define FUNCTION 2
+#define NAV 3
 #define XXX &none
 #define ___ &trans
 
@@ -38,7 +37,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-             &mo NAV &ss LSFT SYM &kp BSPC   &kp RET &kp SPACE &mo FUNCTION
+             &kp LGUI &ss LSFT SYM &kp BSPC   &kp RET &kp SPACE &mo FUNCTION
                         >;
                 };
 		sym_layer {
@@ -49,28 +48,20 @@
                   			              XXX XXX XXX   XXX XXX XXX
                         >;
                 };
-		nav_layer {
-                     bindings = <
-   XXX XXX &kp C_PP   &kp C_NEXT   &kp C_PREV   XXX   &kp HOME &kp PG_DN &kp PG_UP &kp END   XXX XXX
-   XXX XXX &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN XXX   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT XXX XXX
-   XXX XXX XXX        XXX          XXX          XXX   XXX      XXX       XXX       XXX       XXX XXX
-                                        ___ ___ ___   ___ ___ XXX
-                        >;
-                };
-		function_layer {
+   function_layer {
                      bindings = <
    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8  &kp F9 &kp F10  &kp F11  &kp F12
    XXX &kp N0 &kp N1 &kp N2 &kp N3 &kp N4   	&kp N5 &kp N6  &kp N7 &kp N8   &kp N9   XXX
-   XXX XXX    XXX    XXX    XXX    XXX          XXX    XXX     XXX    XXX      XXX      &tog CONFIG
-                                 XXX ___ ___    ___ ___ ___
+   XXX XXX    XXX    XXX    XXX    XXX          XXX    XXX     XXX    XXX      XXX      XXX
+                            ___ &mo NAV ___    ___ ___ ___
                         >;
                 };
-		config_layer {
+		nav_layer {
                      bindings = <
-   &reset      XXX          XXX XXX 	   XXX XXX      XXX XXX 	 XXX &out OUT_TOG XXX &reset
-   &bootloader XXX          XXX XXX	   XXX XXX      XXX XXX		 XXX &bt BT_SEL 1 XXX &bootloader
-   XXX         XXX          XXX &bt BT_CLR XXX XXX     XXX &bt BT_SEL 0 XXX XXX          XXX ___
-                                XXX XXX XXX                     XXX XXX ___ 
+   &bt BT_CLR XXX &kp C_PP   &kp C_NEXT   &kp C_PREV   XXX   &kp HOME &kp PG_DN &kp PG_UP &kp END   XXX XXX
+   XXX XXX &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN XXX   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT XXX XXX
+   XXX XXX XXX        XXX          XXX          XXX   XXX      XXX       XXX       XXX       XXX XXX
+                                        ___ ___ ___   ___ ___ ___
                         >;
                 };
         };
